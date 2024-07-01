@@ -28,6 +28,7 @@ class _MyAppState extends State<MyApp> {
   }
 
   //bool isEligible = true;
+  //conntext = history
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,7 +50,10 @@ class _MyAppState extends State<MyApp> {
               textDirection: TextDirection.ltr,
               style: TextStyle(fontSize: 25.0, color: Colors.green),
             ),
-            ElevatedButton(onPressed: null, child: Text("show snackbar"))
+            ElevatedButton(onPressed: (){
+              final snackBar = SnackBar(content: Text("lets have some snacks"),action: SnackBarAction(label: "undo",onPressed: (){},),);
+              ScaffoldMessenger.of(context).showSnackBar(snackBar);
+            }, child: Text("show snackbar"))
           ],
         ),
       ),
