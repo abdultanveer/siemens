@@ -15,10 +15,16 @@ class MyWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const   Center(
-      child: Text("hello world",
-        textDirection: TextDirection.ltr,
-        style: TextStyle(fontSize: 25.0,color: Colors.green),),
+    return Scaffold(
+      body: const   Center(
+        child: Text("hello scaffold",
+          textDirection: TextDirection.ltr,
+          style: TextStyle(fontSize: 25.0,color: Colors.green),),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: null,
+      ),
     );
   }
 }
