@@ -41,10 +41,16 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       body: Center(
-        child: Text(
-          '$_counter'+" times clicked",
-          textDirection: TextDirection.ltr,
-          style: TextStyle(fontSize: 25.0, color: Colors.green),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              '$_counter'+" times clicked",
+              textDirection: TextDirection.ltr,
+              style: TextStyle(fontSize: 25.0, color: Colors.green),
+            ),
+            ElevatedButton(onPressed: null, child: Text("show snackbar"))
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
