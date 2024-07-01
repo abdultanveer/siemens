@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    Text("hello world",textDirection: TextDirection.ltr,)
+    Center(
+      child: Text("hello world",
+        textDirection: TextDirection.ltr,
+      style: TextStyle(fontSize: 25.0,color: Colors.green),),
+    )
   );
 }
