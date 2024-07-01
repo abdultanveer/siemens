@@ -16,6 +16,9 @@ class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("app bar"),
+      ),
       body: const   Center(
         child: Text("hello scaffold",
           textDirection: TextDirection.ltr,
