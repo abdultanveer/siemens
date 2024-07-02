@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:siemens/layouts/ImageSection.dart';
 import 'package:siemens/layouts/widgets/buttons.dart';
 import 'package:siemens/layouts/widgets/description.dart';
 import 'package:siemens/layouts/widgets/title.dart';
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: Text("Destination details"), backgroundColor: Colors.blueAccent,),
         body: Column(
           children: [
-            Text("image row 1"),
+            ImageSection(imageUrl: "images/lake.jpg"),
             TitleSection(name: "Savandurga", location: "bangalore"),
             ButtonSection(),
             DescriptionSection(description: "description")
