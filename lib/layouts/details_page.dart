@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:siemens/layouts/widgets/buttons.dart';
+import 'package:siemens/layouts/widgets/description.dart';
 import 'package:siemens/layouts/widgets/title.dart';
 
 void main() => runApp(MyApp());
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
             Text("image row 1"),
             TitleSection(name: "Savandurga", location: "bangalore"),
             ButtonSection(),
-            Text(" description row 1"),
+            DescriptionSection(description: "description")
 
           ],
         ),

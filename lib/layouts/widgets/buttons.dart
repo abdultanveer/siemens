@@ -6,7 +6,15 @@ class ButtonSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final Color color1 = Theme.of(context).primaryColor;
-    return const ButtonWithText(color: Colors.cyan, iconData: Icons.call, label: "CALL");
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        const ButtonWithText(color: Colors.cyan, iconData: Icons.call, label: "CALL"),
+        const ButtonWithText(color: Colors.cyan, iconData: Icons.near_me, label: "ROUTE"),
+        const ButtonWithText(color: Colors.cyan, iconData: Icons.share, label: "SHARE"),
+
+      ],
+    );
   }
 }
 
