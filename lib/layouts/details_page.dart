@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:siemens/layouts/widgets/title.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             Text("image row 1"),
-            Text("title row 1"),
+            TitleSection(name: "Savandurga", location: "bangalore"),
             Text("buttons row 1"),
             Text(" description row 1"),
 
