@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:siemens/layouts/widgets/buttons.dart';
 import 'package:siemens/layouts/widgets/title.dart';
 
 void main() => runApp(MyApp());
@@ -12,12 +13,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "layouts demo",
       home: Scaffold(
-        appBar: AppBar(title: Text("Destination details"),),
+        appBar: AppBar(title: Text("Destination details"), backgroundColor: Colors.blueAccent,),
         body: Column(
           children: [
             Text("image row 1"),
             TitleSection(name: "Savandurga", location: "bangalore"),
-            Text("buttons row 1"),
+            ButtonSection(),
             Text(" description row 1"),
 
           ],
