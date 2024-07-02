@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
               DrawerHeader(
                   decoration:BoxDecoration( color: Colors.blueAccent),
                   child: Center(child: Text("drawer header"))),
-              ListTile(title: Text("Settings"),),
+              ListTile(title: Text("Settings"), onTap: (){},),
               ListTile(title: Text("Home"),),
               ListTile(title: Text("logout"),)
             ],
@@ -35,7 +35,10 @@ class MyApp extends StatelessWidget {
             ImageSection(imageUrl: "images/lake.jpg"),
             TitleSection(name: "Savandurga", location: "bangalore"),
             ButtonSection(),
-            DescriptionSection(description: "description")
+            DescriptionSection(description: "description"),
+            IconButton(onPressed: (){
+              Scaffold.of(context).openDrawer();
+            }, icon: Icon(Icons.menu))
           ],
         ),
       ),
