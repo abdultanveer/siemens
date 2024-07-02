@@ -30,6 +30,13 @@ class MyForm extends StatelessWidget {
             hintText: "enter your name"
           )
         ),
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 8,vertical: 16),
+          child: TextField(decoration: InputDecoration(
+            border: UnderlineInputBorder(),
+            labelText: "enter phone no"
+          ),),
+        )
       ],
     );
   }
