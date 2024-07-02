@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: "layouts demo",
       home: Scaffold(
+        drawer: Drawer( child: ListView(children: [ListTile(title: Text("Settings"),)],),),
         appBar: AppBar(title: Text("Destination details"), backgroundColor: Colors.blueAccent,),
         body: Column(
           children: [
