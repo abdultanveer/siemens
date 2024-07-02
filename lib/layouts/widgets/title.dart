@@ -13,22 +13,29 @@ class TitleSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //rows' mainn axis is x-axis and cross axis is y axis
-      return Row(
+      return Padding(
+        padding: const EdgeInsets.all(32.0),
+        child: Row(
 
-        children: [
-          Expanded(
-            child: Column(
-              //columns' mainn axis is y-axis and cross axis is x axis
-           crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text('$name'),
-              Text('$location')
-            ],
+          children: [
+            Expanded(
+              child: Column(
+                //columns' mainn axis is y-axis and cross axis is x axis
+             crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Text('$name', style: TextStyle(fontWeight: FontWeight.bold),),
+
                 ),
-          ),
-          Icon(Icons.star,color: Colors.red[500],),
-          Text('42')
-        ],
+                Text('$location',style: TextStyle(color: Colors.grey[500]),)
+              ],
+                  ),
+            ),
+            Icon(Icons.star,color: Colors.red[500],),
+            Text('42')
+          ],
+        ),
       );
   }
 }
