@@ -33,6 +33,9 @@ class _MyFormState extends State<MyForm> {
       children: [
         TextField(
           controller: myController,
+          onChanged: (textUserTyped){
+            print('$textUserTyped');
+          },
           decoration: InputDecoration(
             border: OutlineInputBorder(),
             hintText: "enter your name"
