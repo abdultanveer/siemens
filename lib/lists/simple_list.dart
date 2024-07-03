@@ -22,7 +22,7 @@ class ListApp extends StatelessWidget {
         body: ListView(
          scrollDirection: Axis.horizontal,
           children:  <Widget>[
-            Container(width: 160,
+            Container(width: 320,
                 child: ListTile(leading: Icon(Icons.photo_album),title: Text("album"))),
             Container(width: 160,
                 child: ListTile(leading: Icon(Icons.school),title: Text("school"),)),
