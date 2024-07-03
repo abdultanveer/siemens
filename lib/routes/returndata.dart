@@ -40,13 +40,13 @@ class _SelectionButtonState extends State<SelectionButton> {
       return const SelectionScreen();
     }));
 
-    if(!context.mounted){//hey if this screen/widget is visible
+    if(!context.mounted) return;  //hey if this screen/widget is visible there's no point to show the retreived data
       ScaffoldMessenger.of(context)
-      ..removeCurrentSnackBar()
+        ..removeCurrentSnackBar()
         ..showSnackBar(SnackBar(content: Text('$result')));
     }
   }
-}
+
 
 
 class SelectionScreen extends StatelessWidget {
