@@ -20,11 +20,14 @@ class ListApp extends StatelessWidget {
           title: const Text("lists demo"),
         ),
         body: ListView(
-         // scrollDirection: Axis.horizontal,
-          children: const <Widget>[
-            ListTile(leading: Icon(Icons.photo_album),title: Text("album")),
-            ListTile(leading: Icon(Icons.school),title: Text("school"),),
-            ListTile(leading: Icon(Icons.car_rental),title: Text("car"),),
+         scrollDirection: Axis.horizontal,
+          children:  <Widget>[
+            Container(width: 160,
+                child: ListTile(leading: Icon(Icons.photo_album),title: Text("album"))),
+            Container(width: 160,
+                child: ListTile(leading: Icon(Icons.school),title: Text("school"),)),
+            Container(width: 160,
+                child: ListTile(leading: Icon(Icons.car_rental),title: Text("car"),)),
           ],
         ),
       ),
