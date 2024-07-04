@@ -7,11 +7,14 @@ import 'package:siemens/webservices/album.dart';
 
 //what are generics
  Future<Album> getAlbum() async{
-   final response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/albums/1"));
+   final response = await http.get(Uri.parse("https://jsonplaceholder.typicode.com/albums/1")); //read
+   //http.post(url)//create a row in db table
+   //http.delete(url) delete
+  // http.put(url) update
    if(response.statusCode == 200) {
      print(response.body);
    }
-   return Album.fromJson(jsonDecode(response.body));
+   return Album.fromJson(jsonDecode(response.body)); //create a list<Album> and returnn them
 
  }
 
@@ -48,7 +51,7 @@ class _WebServiceAppState extends State<WebServiceApp> {
          //return a widget
          //show a circular progress bar while its fetchinng the data
          //after the data has been fetch show a text widget with the data
-         if(snapshot.hasData){ return Text(snapshot.data!.title);}
+         if(snapshot.hasData){ return Text(snapshot.data!.title);}//create a listview and add the title to the listtile
          //else show text widget with error message
          else if (snapshot.hasError){return Text('$snapshot.error');}
          return const CircularProgressIndicator();
