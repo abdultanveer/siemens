@@ -16,8 +16,8 @@ class DogApp extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('dogs demo'),),
       body: ElevatedButton(
-        onPressed: (){
-         var dogDao = DogsDao();
+        onPressed: ()async{
+         var dogDao = await DogsDao();
          dogDao.createDog(Dog(id: 12, name: 'dauberman', age: 2));
         },
         child: Text('insert')
