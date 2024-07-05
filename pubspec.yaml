@@ -37,6 +37,8 @@ dependencies:
   cupertino_icons: ^1.0.6
   getxbottombar: ^0.0.1
   get: ^4.6.6
+  camera: ^0.11.0+1
+  video_player: ^2.2.15
 
 dev_dependencies:
   flutter_test:
